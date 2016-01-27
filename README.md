@@ -6,7 +6,7 @@ Fork and clone the [PixLab repo](http://github.com/mvhs-apcs/PixLab).
 
 ```
 $ git fetch origin
-$ git checkout activity1
+$ git checkout a1
 ```
 
 Read instructions for activity 1 in `Picture Lab Student Guide.pdf`.
@@ -19,11 +19,11 @@ Make commits to this branch as you complete the steps outlined in the activity.
 
 Commit all local changes, then (replace # with the current activity number):
 ```
-$ git push origin activity#
+$ git push origin a#
 ```
 
 ## Switching to the next activity
 
 ```
-$ git checkout activity#
+$ git checkout a#
 ```
