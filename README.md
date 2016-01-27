@@ -24,6 +24,25 @@ $ git push origin a#
 
 ## Switching to the next activity
 
+For the first 5 activities (a1 through a5):
+
 ```
 $ git checkout a#
+```
+
+The branches for activities 6-9 have not been created yet because their code builds on the previous exercises.
+
+First, create a new branch
+```
+$ git branch a#
+```
+
+Then checkout it out
+```
+$ git checkout a#
+```
+
+Or, you can create and switch with one command with the `-b` shortcut
+```
+$ git checkout -b a#
 ```
