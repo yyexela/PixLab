@@ -46,3 +46,8 @@ Or, you can create and switch with one command with the `-b` shortcut
 ```
 $ git checkout -b a#
 ```
+
+If you need to copy a version of a single file from a previous branch into the current branch
+```
+$ git checkout old_branch_name -- file_to_copy.java
+```
