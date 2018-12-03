@@ -13,6 +13,55 @@ public class IntArrayWorker {
 	}
 
 	/**
+	 * Method to return the amount of integers in the matrix
+	 * 
+	 * @return
+	 */
+	public int getColTotal(int column){
+		int sum = 0;
+		for (int row = 0; row < matrix.length; row++) {
+			for (int col = 0; col < matrix[0].length; col++) {
+				if(col == column) sum += matrix[row][col];
+			}
+		}
+		return sum;
+	}
+	
+	/**
+	 * Method to return the amount of integers in the matrix
+	 * 
+	 * @return
+	 */
+	public int getLargest(){
+		int largest = matrix[0][0];
+		for (int row = 0; row < matrix.length; row++) {
+			for (int col = 0; col < matrix[0].length; col++) {
+				if(matrix[row][col] > largest){
+					largest = matrix[row][col];
+				}
+			}
+		}
+		return largest;
+	}
+
+	/**
+	 * Method to return the amount of integers in the matrix
+	 * 
+	 * @return
+	 */
+	public int getCount(int value){
+		int count = 0;
+		for (int row = 0; row < matrix.length; row++) {
+			for (int col = 0; col < matrix[0].length; col++) {
+				if(value == matrix[row][col]){
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	/**
 	 * Method to return the total
 	 * 
 	 * @return the total of the values in the array
