@@ -8,12 +8,44 @@
  */
 public class PictureTester
 {
+  /** Method to make water.jpg easier to see */
+  public static void testFixUnderwater(){
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.fixUnderwater();
+    water.explore();
+  }
+
+  /** Method to grayscale image */
+  public static void testGrayscale(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+
+  /** Method to negate pixels */
+  public static void testNegate(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
     beach.zeroBlue();
+    beach.explore();
+  }
+
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.allBlue();
     beach.explore();
   }
   
@@ -58,13 +90,13 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue(); // WORKS
+    //testKeepOnlyBlue(); //WORKS
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
+    //testNegate(); // WORKS
+    //testGrayscale(); // WORKS
+    testFixUnderwater(); // WORKS
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();

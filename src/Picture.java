@@ -95,6 +95,57 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	/** Method to set the blue to 255 */
+	public void allBlue() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				pixelObj.setRed(0);
+				pixelObj.setGreen(0);
+			}
+		}
+	}
+	
+	/** Method to set all values average */
+	public void fixUnderwater() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				//int maxValue = 0; //red = 0, green = 1, blue = 2;
+				if(pixelObj.getRed() >= pixelObj.getBlue() && pixelObj.getRed() >= pixelObj.getGreen()) pixelObj.setRed(255);
+				else if(pixelObj.getGreen() >= pixelObj.getRed() && pixelObj.getGreen() >= pixelObj.getBlue()) pixelObj.setGreen(255);
+				else if(pixelObj.getBlue() >= pixelObj.getRed() && pixelObj.getBlue() >= pixelObj.getGreen()) pixelObj.setBlue(255);
+
+			}
+		}
+	}
+
+	/** Method to set all values average */
+	public void grayscale() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				int average = (pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue())/3;
+				pixelObj.setRed(average);
+				pixelObj.setGreen(average);
+				pixelObj.setBlue(average);
+			}
+		}
+	}
+
+	/** Method to set all values to 255 - them */
+	public void negate() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				pixelObj.setRed(255 - pixelObj.getRed());
+				pixelObj.setGreen(255 - pixelObj.getGreen());
+				pixelObj.setBlue(255 - pixelObj.getBlue());
+			}
+		}
+	}
+
+
 	/**
 	 * Method that mirrors the picture around a vertical mirror in the center of
 	 * the picture from left to right
