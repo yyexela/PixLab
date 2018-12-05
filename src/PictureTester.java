@@ -26,7 +26,7 @@ public class PictureTester
 
   /** Method to negate pixels */
   public static void testNegate(){
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("snowman.jpg");
     beach.explore();
     beach.negate();
     beach.explore();
@@ -135,6 +135,13 @@ public class PictureTester
     gull.explore();
   }
 
+  /** Method to make my own collage */
+  public static void testMyCollage(){
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -151,14 +158,15 @@ public class PictureTester
     //testFixUnderwater(); // WORKS
     //testMirrorVertical(); // WORKS
     //testMirrorVerticalRightToLeft(); // WORKS
-    // testMirrorHorizontal(); // WORKS
+    //testMirrorHorizontal(); // WORKS
     //testMirrorHorizontalBotToTop(); // WORKS
     //testMirrorDiagonal(); // WORKS
     //testMirrorTemple();
     //testMirrorArms(); // WORKS
-    testMirrorGull(); // WORKS
+    //testMirrorGull(); // WORKS
     //testMirrorDiagonal();
-    //testCollage();
+    //testCollage(); // WORKS
+    testMyCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
