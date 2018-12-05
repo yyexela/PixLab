@@ -119,6 +119,14 @@ public class PictureTester
     swan.explore();
   }
 
+    /** Method to test edgeDetection */
+    public static void testEdgeDetection2()
+    {
+      Picture swan = new Picture("swan.jpg");
+      swan.edgeDetection2(10);
+      swan.explore();
+    }
+
   /** Method to mirror the arms of poor one-armed snowman.jpg */
   public static void testMirrorArms(){
     Picture snowman = new Picture("snowman.jpg");
@@ -166,10 +174,10 @@ public class PictureTester
     //testMirrorGull(); // WORKS
     //testMirrorDiagonal();
     //testCollage(); // WORKS
-    testMyCollage();
+    //testMyCollage(); // WORKS
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    //testEdgeDetection(); // WORKS
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
