@@ -48,6 +48,33 @@ public class PictureTester
     beach.allBlue();
     beach.explore();
   }
+
+  /** Method to test mirrorHorizontal */
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorDiagonal */
+  public static void testMirrorDiagonal()
+  {
+    Picture caterpillar = new Picture("beach.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorHorizontalBotToTop */
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -58,6 +85,15 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  /** Method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -82,7 +118,23 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
+
+  /** Method to mirror the arms of poor one-armed snowman.jpg */
+  public static void testMirrorArms(){
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+
+  /** Method to mirror a seagull on a beach */
+  public static void testMirrorGull(){
+    Picture gull = new Picture("seagull.jpg");
+    gull.explore();
+    gull.mirrorGulls();
+    gull.explore();
+  }
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -96,11 +148,15 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate(); // WORKS
     //testGrayscale(); // WORKS
-    testFixUnderwater(); // WORKS
-    //testMirrorVertical();
+    //testFixUnderwater(); // WORKS
+    //testMirrorVertical(); // WORKS
+    //testMirrorVerticalRightToLeft(); // WORKS
+    // testMirrorHorizontal(); // WORKS
+    //testMirrorHorizontalBotToTop(); // WORKS
+    //testMirrorDiagonal(); // WORKS
     //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
+    //testMirrorArms(); // WORKS
+    testMirrorGull(); // WORKS
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
